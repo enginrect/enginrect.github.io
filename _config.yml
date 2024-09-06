@@ -74,7 +74,7 @@ theme_mode: dark
 cdn: "https://chirpy-img.netlify.app"
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "https://i.namu.wiki/i/iNHimcERpTGzABMCRX6sYYFmlCmxSn5mhLD8ePTRcLFlZ8WSKQ9Ge2j-Vd4EgpRq1hY90Ng-q3Xqx9HEDRZVUnVap_0bxh-eQraxfcb_DEmE1UqS8hdjNabO9Pk8C8C4RIJ6v3Scx2TxCpHJkM1o-A.webp"
+avatar: "{{ site.baseurl }}/assets/img/avatar/2426.jpeg"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
