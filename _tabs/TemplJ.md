@@ -1,5 +1,5 @@
 ---
 layout: templj
 icon: fas fa-gopuram
-order: 3
+order: 2
 ---

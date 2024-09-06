@@ -5,21 +5,39 @@ refactor: true
 
 {% include lang.html %}
 
-<!-- Get templj posts only -->
-{% assign templj_posts = site.posts | where: 'tags', 'templj' %}
+{% assign pinned = site.posts | where: 'pin', 'true' %}
+{% assign default = site.posts | where_exp: 'item', 'item.pin != true and item.hidden != true' %}
 
 {% assign posts = '' | split: '' %}
 
-<!-- Get posts to display -->
-{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
-{% assign templj_num = templj_posts.size | minus: offset %}
+<!-- Get pinned posts -->
 
-{% if templj_num > 0 %}
-{% for i in (offset..templj_posts.size) limit: templj_num %}
-{% assign posts = posts | push: templj_posts[i] %}
+{% assign offset = paginator.page | minus: 1 | times: paginator.per_page %}
+{% assign pinned_num = pinned.size | minus: offset %}
+
+{% if pinned_num > 0 %}
+{% for i in (offset..pinned.size) limit: pinned_num %}
+{% assign posts = posts | push: pinned[i] %}
 {% endfor %}
 {% else %}
-{% assign templj_num = 0 %}
+{% assign pinned_num = 0 %}
+{% endif %}
+
+<!-- Get default posts -->
+
+{% assign default_beg = offset | minus: pinned.size %}
+
+{% if default_beg < 0 %}
+{% assign default_beg = 0 %}
+{% endif %}
+
+{% assign default_num = paginator.posts | size | minus: pinned_num %}
+{% assign default_end = default_beg | plus: default_num | minus: 1 %}
+
+{% if default_num > 0 %}
+{% for i in (default_beg..default_end) %}
+{% assign posts = posts | push: default[i] %}
+{% endfor %}
 {% endif %}
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
@@ -74,6 +92,13 @@ refactor: true
                   </span>
               {% endif %}
             </div>
+
+            {% if post.pin %}
+            <div class="pin ms-1">
+              <i class="fas fa-thumbtack fa-fw"></i>
+              <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
+            </div>
+            {% endif %}
           </div>
           <!-- .post-meta -->
         </div>
