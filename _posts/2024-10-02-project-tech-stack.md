@@ -1,6 +1,6 @@
 ---
 title: FitDine TechStck
-description: description: This document outlines the technology stack will be used in the project.
+description: This document outlines the technology stack will be used in the project.
 author: jay
 date: 2024-10-02 12:00:00 +0800
 categories: [Blogging]
