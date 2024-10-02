@@ -11,8 +11,9 @@ mermaid: true
 ---
 
 ## FitDine
-###### Fitness + Dining 의 합성어이다.
-###### 건강한 식습관과 함께하는 헬스케어를 목표로 한다.
+> Fitness + Dining 의 합성어이다.
+> 
+> 건강한 식습관과 함께하는 헬스케어를 목표로 한다.
 
 ## Point
 1. ### Customer Aspect
