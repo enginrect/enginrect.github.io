@@ -1,5 +1,5 @@
 ---
-layout: templj
-icon: fas fa-gopuram
+layout: fitdine
+icon: fas fa-utensils
 order: 2
 ---

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jay</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-09-06T17:04:24+09:00</updated>
+  <updated>2024-10-03T20:33:55+09:00</updated>
   <author>
     <name>JAYGUE LEE</name>
     <uri>http://localhost:4000/</uri>
@@ -20,11 +20,35 @@
 
   
   <entry>
-    <title>Project Tech Stack</title>
-    <link href="http://localhost:4000/posts/project-tech-stack/" rel="alternate" type="text/html" title="Project Tech Stack" />
-    <published>2024-09-06T13:00:00+09:00</published>
+    <title>FitDine 3-Tier Architecture</title>
+    <link href="http://localhost:4000/posts/three-tier-architecture/" rel="alternate" type="text/html" title="FitDine 3-Tier Architecture" />
+    <published>2024-10-03T13:00:00+09:00</published>
   
-    <updated>2024-09-06T13:00:00+09:00</updated>
+    <updated>2024-10-03T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/three-tier-architecture/</id>
+    <content src="http://localhost:4000/posts/three-tier-architecture/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+  
+
+  <summary>3-Tier Architecture of the project</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>FitDine TechStck</title>
+    <link href="http://localhost:4000/posts/project-tech-stack/" rel="alternate" type="text/html" title="FitDine TechStck" />
+    <published>2024-10-02T13:00:00+09:00</published>
+  
+    <updated>2024-10-02T16:25:14+09:00</updated>
   
     <id>http://localhost:4000/posts/project-tech-stack/</id>
     <content src="http://localhost:4000/posts/project-tech-stack/" />
@@ -39,6 +63,30 @@
   
 
   <summary>This document outlines the technology stack will be used in the project.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>What is FitDine?</title>
+    <link href="http://localhost:4000/posts/project-outline/" rel="alternate" type="text/html" title="What is FitDine?" />
+    <published>2024-10-02T13:00:00+09:00</published>
+  
+    <updated>2024-10-02T16:25:14+09:00</updated>
+  
+    <id>http://localhost:4000/posts/project-outline/</id>
+    <content src="http://localhost:4000/posts/project-outline/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+  
+
+  <summary>This document illustrates about the project</summary>
 
   </entry>
 
