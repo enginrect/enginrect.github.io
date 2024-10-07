@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 1
+permalink: /about
 ---
 
 # Jay Gue Lee

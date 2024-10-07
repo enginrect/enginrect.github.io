@@ -1,5 +1,6 @@
 ---
 layout: fitdine
 icon: fas fa-utensils
-order: 2
+order: 3
+permalink: /fitdine
 ---

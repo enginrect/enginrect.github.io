@@ -3,8 +3,8 @@ title: User Table Documentation
 description: Description of Table 'User'
 author: jay
 date: 2024-10-06 12:00:00 +0800
-categories: [Blogging]
-tags: [FitDine]
+categories: [FitDine]
+tags: [FitDine, table]
 pin: false
 math: true
 mermaid: true

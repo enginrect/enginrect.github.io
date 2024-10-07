@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jay</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-03T20:40:10+09:00</updated>
+  <updated>2024-10-07T16:27:08+09:00</updated>
   <author>
     <name>JAYGUE LEE</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,54 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>USR-001 — User Entity</title>
+    <link href="http://localhost:4000/posts/usr-001/" rel="alternate" type="text/html" title="USR-001 — User Entity" />
+    <published>2024-10-06T13:00:00+09:00</published>
+  
+    <updated>2024-10-06T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/usr-001/</id>
+    <content src="http://localhost:4000/posts/usr-001/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="FitDine" />
+    
+  
+
+  <summary>User Entity</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>User Table Documentation</title>
+    <link href="http://localhost:4000/posts/user-table/" rel="alternate" type="text/html" title="User Table Documentation" />
+    <published>2024-10-06T13:00:00+09:00</published>
+  
+    <updated>2024-10-06T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/user-table/</id>
+    <content src="http://localhost:4000/posts/user-table/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="FitDine" />
+    
+  
+
+  <summary>Description of Table &amp;#39;User&amp;#39;</summary>
+
+  </entry>
 
   
   <entry>
@@ -48,7 +96,7 @@
     <link href="http://localhost:4000/posts/project-tech-stack/" rel="alternate" type="text/html" title="FitDine TechStck" />
     <published>2024-10-02T13:00:00+09:00</published>
   
-    <updated>2024-10-02T16:25:14+09:00</updated>
+    <updated>2024-10-02T13:00:00+09:00</updated>
   
     <id>http://localhost:4000/posts/project-tech-stack/</id>
     <content src="http://localhost:4000/posts/project-tech-stack/" />
@@ -72,7 +120,7 @@
     <link href="http://localhost:4000/posts/project-outline/" rel="alternate" type="text/html" title="What is FitDine?" />
     <published>2024-10-02T13:00:00+09:00</published>
   
-    <updated>2024-10-02T16:25:14+09:00</updated>
+    <updated>2024-10-02T13:00:00+09:00</updated>
   
     <id>http://localhost:4000/posts/project-outline/</id>
     <content src="http://localhost:4000/posts/project-outline/" />
