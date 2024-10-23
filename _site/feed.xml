@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jay</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-07T18:27:26+09:00</updated>
+  <updated>2024-10-23T22:52:37+09:00</updated>
   <author>
     <name>JAYGUE LEE</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,54 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>USR-003 — Get User Detail API</title>
+    <link href="http://localhost:4000/posts/usr-003/" rel="alternate" type="text/html" title="USR-003 — Get User Detail API" />
+    <published>2024-10-19T13:00:00+09:00</published>
+  
+    <updated>2024-10-19T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/usr-003/</id>
+    <content src="http://localhost:4000/posts/usr-003/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="FitDine" />
+    
+  
+
+  <summary>Get User Detail API</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>USR-002 — Create User API</title>
+    <link href="http://localhost:4000/posts/usr-002/" rel="alternate" type="text/html" title="USR-002 — Create User API" />
+    <published>2024-10-10T13:00:00+09:00</published>
+  
+    <updated>2024-10-10T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/usr-002/</id>
+    <content src="http://localhost:4000/posts/usr-002/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="FitDine" />
+    
+  
+
+  <summary>Create User API</summary>
+
+  </entry>
 
   
   <entry>
@@ -87,54 +135,6 @@
   
 
   <summary>3-Tier Architecture of the project</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>FitDine TechStck</title>
-    <link href="http://localhost:4000/posts/project-tech-stack/" rel="alternate" type="text/html" title="FitDine TechStck" />
-    <published>2024-10-02T13:00:00+09:00</published>
-  
-    <updated>2024-10-02T13:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/project-tech-stack/</id>
-    <content src="http://localhost:4000/posts/project-tech-stack/" />
-    <author>
-      <name>jay</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-  
-
-  <summary>This document outlines the technology stack will be used in the project.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>What is FitDine?</title>
-    <link href="http://localhost:4000/posts/project-outline/" rel="alternate" type="text/html" title="What is FitDine?" />
-    <published>2024-10-02T13:00:00+09:00</published>
-  
-    <updated>2024-10-02T13:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/project-outline/</id>
-    <content src="http://localhost:4000/posts/project-outline/" />
-    <author>
-      <name>jay</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-  
-
-  <summary>This document illustrates about the project</summary>
 
   </entry>
 
