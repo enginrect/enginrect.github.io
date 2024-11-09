@@ -4,7 +4,7 @@ description: Description of Table 'Menu'
 author: jay
 date: 2024-11-08 12:00:00 +0800
 categories: [FitDine]
-tags: [FitDine, table, order]
+tags: [FitDine, table, product]
 pin: false
 math: true
 mermaid: true
