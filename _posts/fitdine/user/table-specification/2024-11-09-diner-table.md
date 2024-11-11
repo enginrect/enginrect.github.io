@@ -11,7 +11,7 @@ mermaid: true
 ---
 
 
-## Table Name: `store`
+## Table Name: `diner`
 
 음식점의 기본 정보를 포함한 테이블로, 각 음식점의 소유자와 주소 정보를 관리합니다.
 
@@ -21,10 +21,10 @@ mermaid: true
 
 | **Column Name**     | **Data Type**  | **Nullable** | **Unique** | **Description** |
 |---------------------|----------------|--------------|------------|-----------------|
-| `store_id`          | `BIGINT`       | `NOT NULL`   | `YES`      | 음식점 ID          |
+| `diner_id`          | `BIGINT`       | `NOT NULL`   | `YES`      | 음식점 ID          |
 | `owner_user_id`     | `BIGINT`       | `NOT NULL`   | `NO`       | 음식점 보유자 ID      |
-| `store_name`        | `VARCHAR(255)` | `NOT NULL`   | `NO`       | 음식점 이름          |
-| `store_address`     | `VARCHAR(255)` | `NOT NULL`   | `NO`       | 음식점 주소          |
+| `diner_name`        | `VARCHAR(255)` | `NOT NULL`   | `NO`       | 음식점 이름          |
+| `diner_address`     | `VARCHAR(255)` | `NOT NULL`   | `NO`       | 음식점 주소          |
 | `delete_yn`         | `VARCHAR(1)`   | `NOT NULL`   | `NO`       | 삭제 여부           |
 | `created_user_id`   | `BIGINT`       | `NOT NULL`   | `NO`       | 등록자 ID          |
 | `created_datetime`  | `DATETIME`     | `NOT NULL`   | `NO`       | 등록 일시           |
@@ -34,7 +34,7 @@ mermaid: true
 ---
 ### Detailed Description:
 
-- **`store_id`**:
+- **`diner_id`**:
   - 음식점을 고유하게 식별하는 ID로, 자동 증가하며 테이블의 기본 키입니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `YES`
@@ -44,12 +44,12 @@ mermaid: true
   - **Nullable**: `NOT NULL`
   - **Unique**: `NO`
 
-- **`store_name`**:
+- **`diner_name`**:
   - 음식점명을 나타내며, 최대 255자를 허용합니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `NO`
 
-- **`store_address`**:
+- **`diner_address`**:
   - 음식점 주소를 나타내며, 최대 255자를 허용합니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `NO`
@@ -68,20 +68,20 @@ mermaid: true
 ### Example SQL Query:
 
 ```sql
-CREATE TABLE `store`
+CREATE TABLE `diner`
 (
-  store_id           BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 ID',
+  diner_id           BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 ID',
   owner_user_id      BIGINT           NOT NULL               COMMENT '음식점 보유자',
-  store_name         VARCHAR(255)     NOT NULL               COMMENT '음식점 이름',
-  store_address      VARCHAR(255)     NOT NULL               COMMENT '음식점 주소',
+  diner_name         VARCHAR(255)     NOT NULL               COMMENT '음식점 이름',
+  diner_address      VARCHAR(255)     NOT NULL               COMMENT '음식점 주소',
   delete_yn          VARCHAR(1)       NOT NULL DEFAULT 'N'   COMMENT '삭제 여부',
   created_user_id    BIGINT           NOT NULL               COMMENT '등록자 ID',
   created_datetime   DATETIME         NOT NULL               COMMENT '등록 일시',
   modified_user_id   BIGINT           NOT NULL               COMMENT '수정자 ID',
   modified_datetime  DATETIME         NOT NULL               COMMENT '수정 일시',
 
-  PRIMARY KEY (store_id),
-  CONSTRAINT fk_store_user FOREIGN KEY (user_id) REFERENCES `user`(user_id)
+  PRIMARY KEY (diner_id),
+  CONSTRAINT fk_diner FOREIGN KEY (owner_user_id) REFERENCES `user`(user_id)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='음식점';
 ```
 

@@ -11,7 +11,7 @@ mermaid: true
 ---
 
 
-## Table Name: `store_schedule`
+## Table Name: `diner_schedule`
 
 음식점의 요일별 운영 시간대를 관리하는 테이블로, 각 음식점의 요일별 오픈 및 종료 시간을 설정합니다.
 
@@ -21,8 +21,8 @@ mermaid: true
 
 | **Column Name**     | **Data Type** | **Nullable** | **Unique** | **Description** |
 |---------------------|---------------|--------------|------------|-----------------|
-| `store_schedule_id` | `BIGINT`      | `NOT NULL`   | `YES`      | 음식점 스케줄 ID      |
-| `store_id`          | `BIGINT`      | `NOT NULL`   | `NO`       | 음식점 ID (FK)     |
+| `diner_schedule_id` | `BIGINT`      | `NOT NULL`   | `YES`      | 음식점 스케줄 ID      |
+| `diner_id`          | `BIGINT`      | `NOT NULL`   | `NO`       | 음식점 ID (FK)     |
 | `day_of_week`       | `ENUM(...)`   | `NOT NULL`   | `NO`       | 요일              |
 | `open_time`         | `TIME`        | `NOT NULL`   | `NO`       | 오픈 시간           |
 | `close_time`        | `TIME`        | `NOT NULL`   | `NO`       | 종료 시간           |
@@ -35,13 +35,13 @@ mermaid: true
 ---
 ### Detailed Description:
 
-- **`store_schedule_id`**:
+- **`diner_schedule_id`**:
   - 음식점 스케줄 ID로 이 테이블의 PK 입니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `YES`
 
-- **`store_id`**:
-  - 음식점 ID로, `store` 테이블의 `store_id`를 참조하는 외래 키(FK)입니다.
+- **`diner_id`**:
+  - 음식점 ID로, `diner` 테이블의 `diner_id`를 참조하는 외래 키(FK)입니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `NO`
 
@@ -68,10 +68,10 @@ mermaid: true
 ### Example SQL Query:
 
 ```sql
-CREATE TABLE `store_schedule`
+CREATE TABLE `diner_schedule`
 (
-    store_schedule_id  BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 스케줄 ID',
-    store_id           BIGINT           NOT NULL               COMMENT '음식점 ID',
+    diner_schedule_id  BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 스케줄 ID',
+    diner_id           BIGINT           NOT NULL               COMMENT '음식점 ID',
     day_of_week        ENUM('MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN') 
                                         NOT NULL                COMMENT '요일',
     open_time          TIME             NOT NULL               COMMENT '오픈 시간',
@@ -82,8 +82,8 @@ CREATE TABLE `store_schedule`
     modified_user_id   BIGINT           NOT NULL               COMMENT '수정자 ID',
     modified_datetime  DATETIME         NOT NULL               COMMENT '수정 일시',
 
-    PRIMARY KEY (store_schedule_id),
-    CONSTRAINT fk_store_schedule_store FOREIGN KEY (store_id) REFERENCES `store`(store_id)
+    PRIMARY KEY (diner_schedule_id),
+    CONSTRAINT fk_diner_schedule_diner FOREIGN KEY (diner_id) REFERENCES `diner`(diner_id)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='음식점 스케줄';
 ```
 

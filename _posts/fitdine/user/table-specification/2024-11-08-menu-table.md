@@ -70,17 +70,18 @@ mermaid: true
 ```sql
 CREATE TABLE `menu`
 (
-    menu_id           	BIGINT           NOT NULL AUTO_INCREMENT    COMMENT '메뉴 ID',
-    store_id             BIGINT           NOT NULL                   COMMENT '음식점 ID',
-    menu_name.           VARCHAR(255)     NOT NULL                   COMMENT '메뉴명',
-    menu_price  	        DECIMAL(10, 2)   NOT NULL                   COMMENT  '메뉴 가격',
-    delete_yn            VARCHAR(1)       NOT NULL                   COMMENT '삭제 여부',
-    created_user_id      BIGINT           NOT NULL                   COMMENT '등록자 ID',
-    created_datetime     DATETIME         NOT NULL                   COMMENT '등록 일시',
-    modified_user_id     BIGINT           NOT NULL                   COMMENT '수정자 ID',
-    modified_datetime    DATETIME         NOT NULL                   COMMENT '수정 일시',
+    menu_id           	 BIGINT             NOT NULL AUTO_INCREMENT    COMMENT '메뉴 ID',
+    diner_id             BIGINT             NOT NULL                   COMMENT '음식점 ID',
+    menu_name            VARCHAR(255)       NOT NULL                   COMMENT '메뉴명',
+    menu_price  	     BIGDECIMAL(10, 2)  NOT NULL                   COMMENT  '메뉴 가격',
+    delete_yn            VARCHAR(1)         NOT NULL                   COMMENT '삭제 여부',
+    created_user_id      BIGINT             NOT NULL                   COMMENT '등록자 ID',
+    created_datetime     DATETIME           NOT NULL                   COMMENT '등록 일시',
+    modified_user_id     BIGINT             NOT NULL                   COMMENT '수정자 ID',
+    modified_datetime    DATETIME           NOT NULL                   COMMENT '수정 일시',
 
-    CONSTRAINT pk_menu PRIMARY KEY (menu_id)
+    CONSTRAINT pk_menu PRIMARY KEY (menu_id),
+    CONSTRAINT fk_menu FOREIGN KEY (diner_id) REFERENCES `diner`(diner_id)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='메뉴';
 ```
 

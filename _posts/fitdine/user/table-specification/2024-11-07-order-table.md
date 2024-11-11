@@ -19,18 +19,18 @@ mermaid: true
 
 ### Columns:
 
-| **Column Name**     | **Data Type**            | **Nullable** | **Unique** | **Description**        |
-|---------------------|--------------------------|--------------|------------|------------------------|
-| `order_id`          | `BIGINT`                 | `NOT NULL`   | `YES`      | 주문 ID                |
-| `user_id`           | `BIGINT`                 | `NOT NULL`   | `NO`       | 사용자 ID (FK)          |
-| `order_number`      | `VARCHAR(255)`           | `NOT NULL`   | `YES`      | 주문 번호 (고유)        |
-| `order_date`        | `DATETIME`               | `NOT NULL`   | `NO`       | 주문 일자               |
-| `total_amount`      | `DECIMAL(10, 2)`         | `NOT NULL`   | `NO`       | 총 주문 금액           |
-| `delete_yn`         | `VARCHAR(1)`             | `NOT NULL`   | `NO`       | 삭제 여부              |
-| `created_user_id`   | `BIGINT`                 | `NOT NULL`   | `NO`       | 등록자 ID             |
-| `created_datetime`  | `DATETIME`               | `NOT NULL`   | `NO`       | 등록 일시              |
-| `modified_user_id`  | `BIGINT`                 | `NOT NULL`   | `NO`       | 수정자 ID             |
-| `modified_datetime` | `DATETIME`               | `NOT NULL`   | `NO`       | 수정 일시              |
+| **Column Name**     | **Data Type**            | **Nullable** | **Unique** | **Description** |
+|---------------------|--------------------------|--------------|------------|-------------|
+| `order_id`          | `BIGINT`                 | `NOT NULL`   | `YES`      | 주문 ID       |
+| `order_user_id`     | `BIGINT`                 | `NOT NULL`   | `NO`       | 주문자 ID      |
+| `order_number`      | `VARCHAR(255)`           | `NOT NULL`   | `YES`      | 주문 번호 (고유)  |
+| `order_date`        | `DATETIME`               | `NOT NULL`   | `NO`       | 주문 일자       |
+| `total_amount`      | `DECIMAL(10, 2)`         | `NOT NULL`   | `NO`       | 총 주문 금액     |
+| `delete_yn`         | `VARCHAR(1)`             | `NOT NULL`   | `NO`       | 삭제 여부       |
+| `created_user_id`   | `BIGINT`                 | `NOT NULL`   | `NO`       | 등록자 ID      |
+| `created_datetime`  | `DATETIME`               | `NOT NULL`   | `NO`       | 등록 일시       |
+| `modified_user_id`  | `BIGINT`                 | `NOT NULL`   | `NO`       | 수정자 ID      |
+| `modified_datetime` | `DATETIME`               | `NOT NULL`   | `NO`       | 수정 일시       |
 
 ---
 
@@ -41,8 +41,8 @@ mermaid: true
   - **Nullable**: `NOT NULL`
   - **Unique**: `YES`
 
-- **`user_id`**:
-  - 주문을 생성한 사용자의 ID로, `user` 테이블의 `user_id`를 참조하는 외래 키(FK)입니다.
+- **`order_user_id`**:
+  - 주문을 생성한 사용자의 ID로, User 도메인의 user 테이블의 user_id 입니다.
   - 이를 통해 각 주문이 특정 사용자와 연결됩니다.
   - **Nullable**: `NOT NULL`
   - **Unique**: `NO`
@@ -95,19 +95,18 @@ mermaid: true
 ```sql
 CREATE TABLE `order`
 (
-    order_id               BIGINT           NOT NULL AUTO_INCREMENT    COMMENT '주문 ID',
-    user_id                BIGINT           NOT NULL                   COMMENT '사용자 ID (FK)',
-    order_number           VARCHAR(255)     NOT NULL UNIQUE            COMMENT '주문 번호',
-    order_date             DATETIME         NOT NULL                   COMMENT '주문 일자',
-    total_amount           DECIMAL(10, 2)   NOT NULL                   COMMENT '총 주문 금액',
-    delete_yn              VARCHAR(1)       NOT NULL                   COMMENT '삭제 여부',
-    created_user_id        BIGINT           NOT NULL                   COMMENT '등록자 ID',
-    created_datetime       DATETIME         NOT NULL                   COMMENT '등록 일시',
-    modified_user_id       BIGINT           NOT NULL                   COMMENT '수정자 ID',
-    modified_datetime      DATETIME         NOT NULL                   COMMENT '수정 일시',
+    order_id               BIGINT               NOT NULL AUTO_INCREMENT    COMMENT '주문 ID',
+    order_user_id          BIGINT               NOT NULL                   COMMENT '주문자 ID',
+    order_number           VARCHAR(255)         NOT NULL UNIQUE            COMMENT '주문 번호',
+    order_date             DATETIME             NOT NULL                   COMMENT '주문 일자',
+    total_amount           BIGDECIMAL(10, 2)    NOT NULL                   COMMENT '총 주문 금액',
+    delete_yn              VARCHAR(1)           NOT NULL                   COMMENT '삭제 여부',
+    created_user_id        BIGINT               NOT NULL                   COMMENT '등록자 ID',
+    created_datetime       DATETIME             NOT NULL                   COMMENT '등록 일시',
+    modified_user_id       BIGINT               NOT NULL                   COMMENT '수정자 ID',
+    modified_datetime      DATETIME             NOT NULL                   COMMENT '수정 일시',
 
-    CONSTRAINT pk_order PRIMARY KEY (order_id),
-    CONSTRAINT fk_order_user FOREIGN KEY (user_id) REFERENCES `user`(user_id)
+    CONSTRAINT pk_order PRIMARY KEY (order_id)
 ) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='주문';
 ```
 
