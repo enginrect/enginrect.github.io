@@ -1,11 +1,11 @@
 [
   
   {
-    "title": "USR-003 — Get User Detail API",
-    "url": "/posts/usr-003/",
+    "title": "Store_Schedule Table Documentation",
+    "url": "/posts/diner-schedule-table/",
     "categories": "FitDine",
-    "tags": "FitDine, USR",
-    "date": "2024-10-19 13:00:00 +0900",
+    "tags": "FitDine, table, user",
+    "date": "2024-11-10 13:00:00 +0900",
     
 
 
@@ -13,16 +13,16 @@
 
 
     
-    "snippet": "USR-003 — Get User Detail APIRequirements사용자 상세 조회 API  비밀번호를 제외한 기본정보 제공 API",
-    "content": "USR-003 — Get User Detail APIRequirements사용자 상세 조회 API  비밀번호를 제외한 기본정보 제공 API"
+    "snippet": "Table Name: diner_schedule음식점의 요일별 운영 시간대를 관리하는 테이블로, 각 음식점의 요일별 오픈 및 종료 시간을 설정합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  diner_s...",
+    "content": "Table Name: diner_schedule음식점의 요일별 운영 시간대를 관리하는 테이블로, 각 음식점의 요일별 오픈 및 종료 시간을 설정합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  diner_schedule_id      BIGINT      NOT NULL      YES      음식점 스케줄 ID              diner_id      BIGINT      NOT NULL      NO      음식점 ID (FK)              day_of_week      ENUM(...)      NOT NULL      NO      요일              open_time      TIME      NOT NULL      NO      오픈 시간              close_time      TIME      NOT NULL      NO      종료 시간              delete_yn      VARCHAR(1)      NOT NULL      NO      삭제 여부              created_user_id      BIGINT      NOT NULL      NO      등록자 ID              created_datetime      DATETIME      NOT NULL      NO      등록 일시              modified_user_id      BIGINT      NOT NULL      NO      수정자 ID              modified_datetime      DATETIME      NOT NULL      NO      수정 일시      Detailed Description:  diner_schedule_id:          음식점 스케줄 ID로 이 테이블의 PK 입니다.      Nullable: NOT NULL      Unique: YES        diner_id:          음식점 ID로, diner 테이블의 diner_id를 참조하는 외래 키(FK)입니다.      Nullable: NOT NULL      Unique: NO        day_of_week:          음식점 오픈 요일을 나타내며, MON, TUE, WED, THU, FRI, SAT, SUN 중 하나 입니다.      ENUM 으로 관리됩니다.      Nullable: NOT NULL      Unique: NO        open_time:          음식점 오픈 시간을 나타내며, HH:mm:ss 로만 나타냅니다.      Nullable: NOT NULL      Unique: NO        delete_yn:          주문-상품 관계의 삭제 여부를 나타내며, 'Y' 또는 'N' 값을 가질 수 있습니다.      Nullable: NOT NULL      Unique: NO        created_user_id, created_datetime, modified_user_id, modified_datetime:          주문-상품 관계의 생성 및 수정 정보를 기록하는 메타데이터.      Example SQL Query:CREATE TABLE `diner_schedule`(    diner_schedule_id  BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 스케줄 ID',    diner_id           BIGINT           NOT NULL               COMMENT '음식점 ID',    day_of_week        ENUM('MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN')                                         NOT NULL                COMMENT '요일',    open_time          TIME             NOT NULL               COMMENT '오픈 시간',    close_time         TIME             NOT NULL               COMMENT '종료 시간',    delete_yn          VARCHAR(1)       NOT NULL DEFAULT 'N'   COMMENT '삭제 여부',    created_user_id    BIGINT           NOT NULL               COMMENT '등록자 ID',    created_datetime   DATETIME         NOT NULL               COMMENT '등록 일시',    modified_user_id   BIGINT           NOT NULL               COMMENT '수정자 ID',    modified_datetime  DATETIME         NOT NULL               COMMENT '수정 일시',    PRIMARY KEY (diner_schedule_id),    CONSTRAINT fk_diner_schedule_diner FOREIGN KEY (diner_id) REFERENCES `diner`(diner_id)) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='음식점 스케줄';"
   },
   
   {
-    "title": "USR-002 — Create User API",
-    "url": "/posts/usr-002/",
+    "title": "Store Table Documentation",
+    "url": "/posts/diner-table/",
     "categories": "FitDine",
-    "tags": "FitDine, USR",
-    "date": "2024-10-10 13:00:00 +0900",
+    "tags": "FitDine, table, user",
+    "date": "2024-11-09 13:00:00 +0900",
     
 
 
@@ -30,16 +30,16 @@
 
 
     
-    "snippet": "USR-002 — Create User APIRequirements사용자 생성 APIPoint  이메일 중복 확인 여부  비밀번호 암호화  이름  나이  성별 MALE, FEMALE 만 허용  휴대폰 번호 010-xxxx-xxxx 형태 확인  가입 일자",
-    "content": "USR-002 — Create User APIRequirements사용자 생성 APIPoint  이메일 중복 확인 여부  비밀번호 암호화  이름  나이  성별 MALE, FEMALE 만 허용  휴대폰 번호 010-xxxx-xxxx 형태 확인  가입 일자"
+    "snippet": "Table Name: diner음식점의 기본 정보를 포함한 테이블로, 각 음식점의 소유자와 주소 정보를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  diner_id      BIGINT      ...",
+    "content": "Table Name: diner음식점의 기본 정보를 포함한 테이블로, 각 음식점의 소유자와 주소 정보를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  diner_id      BIGINT      NOT NULL      YES      음식점 ID              owner_user_id      BIGINT      NOT NULL      NO      음식점 보유자 ID              diner_name      VARCHAR(255)      NOT NULL      NO      음식점 이름              diner_address      VARCHAR(255)      NOT NULL      NO      음식점 주소              delete_yn      VARCHAR(1)      NOT NULL      NO      삭제 여부              created_user_id      BIGINT      NOT NULL      NO      등록자 ID              created_datetime      DATETIME      NOT NULL      NO      등록 일시              modified_user_id      BIGINT      NOT NULL      NO      수정자 ID              modified_datetime      DATETIME      NOT NULL      NO      수정 일시      Detailed Description:  diner_id:          음식점을 고유하게 식별하는 ID로, 자동 증가하며 테이블의 기본 키입니다.      Nullable: NOT NULL      Unique: YES        owner_user_id:          음식점 소유주의 ID로, user 테이블의 user_id를 참조합니다.      Nullable: NOT NULL      Unique: NO        diner_name:          음식점명을 나타내며, 최대 255자를 허용합니다.      Nullable: NOT NULL      Unique: NO        diner_address:          음식점 주소를 나타내며, 최대 255자를 허용합니다.      Nullable: NOT NULL      Unique: NO        delete_yn:          메뉴의 삭제 여부를 나타내며, 'Y' 또는 'N' 값을 가질 수 있습니다.      Nullable: NOT NULL      Unique: NO        created_user_id, created_datetime, modified_user_id, modified_datetime:          각 상품의 생성 및 수정 정보를 기록하는 메타데이터.      Example SQL Query:CREATE TABLE `diner`(  diner_id           BIGINT           NOT NULL AUTO_INCREMENT COMMENT '음식점 ID',  owner_user_id      BIGINT           NOT NULL               COMMENT '음식점 보유자',  diner_name         VARCHAR(255)     NOT NULL               COMMENT '음식점 이름',  diner_address      VARCHAR(255)     NOT NULL               COMMENT '음식점 주소',  delete_yn          VARCHAR(1)       NOT NULL DEFAULT 'N'   COMMENT '삭제 여부',  created_user_id    BIGINT           NOT NULL               COMMENT '등록자 ID',  created_datetime   DATETIME         NOT NULL               COMMENT '등록 일시',  modified_user_id   BIGINT           NOT NULL               COMMENT '수정자 ID',  modified_datetime  DATETIME         NOT NULL               COMMENT '수정 일시',  PRIMARY KEY (diner_id),  CONSTRAINT fk_diner FOREIGN KEY (owner_user_id) REFERENCES `user`(user_id)) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='음식점';"
   },
   
   {
-    "title": "USR-001 — User Entity",
-    "url": "/posts/usr-001/",
+    "title": "Menu Table Documentation",
+    "url": "/posts/menu-table/",
     "categories": "FitDine",
-    "tags": "FitDine, USR",
-    "date": "2024-10-06 13:00:00 +0900",
+    "tags": "FitDine, table, product",
+    "date": "2024-11-08 13:00:00 +0900",
     
 
 
@@ -47,15 +47,32 @@
 
 
     
-    "snippet": "USR-001 — User EntityGiven사용자 기본 정보  이메일 (아이디가 아닌 이메일을 기본 주소로 진행한다)  비밀번호  이름  나이  성별  휴대폰 번호  가입 일자RequirementsUSER Entity,  Repository 생성",
-    "content": "USR-001 — User EntityGiven사용자 기본 정보  이메일 (아이디가 아닌 이메일을 기본 주소로 진행한다)  비밀번호  이름  나이  성별  휴대폰 번호  가입 일자RequirementsUSER Entity,  Repository 생성"
+    "snippet": "Table Name: menu메뉴 정보를 포함한 테이블로, 각 메뉴의 기본 정보와 관련된 음식점(Store)과의 관계를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  menu_id      BIGI...",
+    "content": "Table Name: menu메뉴 정보를 포함한 테이블로, 각 메뉴의 기본 정보와 관련된 음식점(Store)과의 관계를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  menu_id      BIGINT      NOT NULL      YES      상품 ID              store_id      BIGINT      NOT NULL      NO      음식점 ID              menu_name      VARCHAR(255)      NOT NULL      NO      상품명              menu_price      DECIMAL(10, 2)      NOT NULL      NO      상품 가격              delete_yn      VARCHAR(1)      NOT NULL      NO      삭제 여부              created_user_id      BIGINT      NOT NULL      NO      등록자 ID              created_datetime      DATETIME      NOT NULL      NO      등록 일시              modified_user_id      BIGINT      NOT NULL      NO      수정자 ID              modified_datetime      DATETIME      NOT NULL      NO      수정 일시      Detailed Description:  menu_id:          메뉴를 고유하게 식별하는 ID로, 자동 증가하며 테이블의 기본 키입니다.      Nullable: NOT NULL      Unique: YES        store_id:          메뉴가 속한 음식점의 ID로, User 도메인의store 테이블의 store_id를 참조합니다.      Nullable: NOT NULL      Unique: NO        menu_name:          메뉴명을 나타내며, 최대 255자를 허용합니다.      Nullable: NOT NULL      Unique: NO        menu_price:          메뉴의 가격을 소수점 2자리까지 저장합니다.      Nullable: NOT NULL      Unique: NO        delete_yn:          메뉴의 삭제 여부를 나타내며, 'Y' 또는 'N' 값을 가질 수 있습니다.      Nullable: NOT NULL      Unique: NO        created_user_id, created_datetime, modified_user_id, modified_datetime:          각 상품의 생성 및 수정 정보를 기록하는 메타데이터.      Example SQL Query:CREATE TABLE `menu`(    menu_id           \t BIGINT             NOT NULL AUTO_INCREMENT    COMMENT '메뉴 ID',    diner_id             BIGINT             NOT NULL                   COMMENT '음식점 ID',    menu_name            VARCHAR(255)       NOT NULL                   COMMENT '메뉴명',    menu_price  \t     BIGDECIMAL(10, 2)  NOT NULL                   COMMENT  '메뉴 가격',    delete_yn            VARCHAR(1)         NOT NULL                   COMMENT '삭제 여부',    created_user_id      BIGINT             NOT NULL                   COMMENT '등록자 ID',    created_datetime     DATETIME           NOT NULL                   COMMENT '등록 일시',    modified_user_id     BIGINT             NOT NULL                   COMMENT '수정자 ID',    modified_datetime    DATETIME           NOT NULL                   COMMENT '수정 일시',    CONSTRAINT pk_menu PRIMARY KEY (menu_id),    CONSTRAINT fk_menu FOREIGN KEY (diner_id) REFERENCES `diner`(diner_id)) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='메뉴';"
+  },
+  
+  {
+    "title": "Order Table Documentation",
+    "url": "/posts/order-table/",
+    "categories": "FitDine",
+    "tags": "FitDine, table, order",
+    "date": "2024-11-07 13:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "Table Name: order사용자의 주문 정보를 포함한 테이블로, 주문 내역 및 관련 상품과의 관계를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  order_id      BIGINT     ...",
+    "content": "Table Name: order사용자의 주문 정보를 포함한 테이블로, 주문 내역 및 관련 상품과의 관계를 관리합니다.Columns:            Column Name      Data Type      Nullable      Unique      Description                  order_id      BIGINT      NOT NULL      YES      주문 ID              order_user_id      BIGINT      NOT NULL      NO      주문자 ID              order_number      VARCHAR(255)      NOT NULL      YES      주문 번호 (고유)              order_date      DATETIME      NOT NULL      NO      주문 일자              total_amount      DECIMAL(10, 2)      NOT NULL      NO      총 주문 금액              delete_yn      VARCHAR(1)      NOT NULL      NO      삭제 여부              created_user_id      BIGINT      NOT NULL      NO      등록자 ID              created_datetime      DATETIME      NOT NULL      NO      등록 일시              modified_user_id      BIGINT      NOT NULL      NO      수정자 ID              modified_datetime      DATETIME      NOT NULL      NO      수정 일시      Detailed Description:  order_id:          주문을 고유하게 식별하는 ID로, 자동 증가하며 테이블의 기본 키입니다.      Nullable: NOT NULL      Unique: YES        order_user_id:          주문을 생성한 사용자의 ID로, User 도메인의 user 테이블의 user_id 입니다.      이를 통해 각 주문이 특정 사용자와 연결됩니다.      Nullable: NOT NULL      Unique: NO        order_number:          주문 고유 번호로, 주문을 고유하게 식별하는 값입니다.      UNIQUE 제약 조건을 통해 중복되지 않는 값을 유지합니다.      Nullable: NOT NULL      Unique: YES        order_date:          주문이 생성된 날짜 및 시간을 기록합니다.      Nullable: NOT NULL      Unique: NO        total_amount:          주문의 총 금액을 저장하며, 소수점 2자리까지 표현 가능합니다.      Nullable: NOT NULL      Unique: NO        delete_yn:          주문의 삭제 여부를 나타내며, 'Y' 또는 'N' 값을 가질 수 있습니다.      Nullable: NOT NULL      Unique: NO        created_user_id:          주문을 최초로 생성한 사용자의 ID를 나타냅니다.      Nullable: NOT NULL      Unique: NO        created_datetime:          주문이 최초 생성된 날짜 및 시간입니다.      Nullable: NOT NULL      Unique: NO        modified_user_id:          주문 정보를 최종 수정한 사용자의 ID를 나타냅니다.      Nullable: NOT NULL      Unique: NO        modified_datetime:          주문 정보가 최종 수정된 날짜 및 시간을 기록합니다.      Nullable: NOT NULL      Unique: NO      Example SQL Query:CREATE TABLE `order`(    order_id               BIGINT               NOT NULL AUTO_INCREMENT    COMMENT '주문 ID',    order_user_id          BIGINT               NOT NULL                   COMMENT '주문자 ID',    order_number           VARCHAR(255)         NOT NULL UNIQUE            COMMENT '주문 번호',    order_date             DATETIME             NOT NULL                   COMMENT '주문 일자',    total_amount           BIGDECIMAL(10, 2)    NOT NULL                   COMMENT '총 주문 금액',    delete_yn              VARCHAR(1)           NOT NULL                   COMMENT '삭제 여부',    created_user_id        BIGINT               NOT NULL                   COMMENT '등록자 ID',    created_datetime       DATETIME             NOT NULL                   COMMENT '등록 일시',    modified_user_id       BIGINT               NOT NULL                   COMMENT '수정자 ID',    modified_datetime      DATETIME             NOT NULL                   COMMENT '수정 일시',    CONSTRAINT pk_order PRIMARY KEY (order_id)) ENGINE = INNODB DEFAULT CHARSET=utf8mb4 COMMENT='주문';"
   },
   
   {
     "title": "User Table Documentation",
     "url": "/posts/user-table/",
     "categories": "FitDine",
-    "tags": "FitDine, table",
+    "tags": "FitDine, table, user",
     "date": "2024-10-06 13:00:00 +0900",
     
 

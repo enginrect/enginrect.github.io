@@ -1,2 +1,26 @@
+# 빌드 디렉터리
+_site/
+.jekyll-cache/
+.sass-cache/
+.rollup.cache/
+
+# Node.js
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# IDEs
 .idea/
-/.idea/
+.vscode/
+
+# Ruby
+Gemfile.lock
+
+# 환경 변수
+.env

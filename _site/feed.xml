@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jay</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-10-23T22:52:37+09:00</updated>
+  <updated>2024-12-07T17:32:13+09:00</updated>
   <author>
     <name>JAYGUE LEE</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,14 @@
 
   
   <entry>
-    <title>USR-003 — Get User Detail API</title>
-    <link href="http://localhost:4000/posts/usr-003/" rel="alternate" type="text/html" title="USR-003 — Get User Detail API" />
-    <published>2024-10-19T13:00:00+09:00</published>
+    <title>Store_Schedule Table Documentation</title>
+    <link href="http://localhost:4000/posts/diner-schedule-table/" rel="alternate" type="text/html" title="Store_Schedule Table Documentation" />
+    <published>2024-11-10T13:00:00+09:00</published>
   
-    <updated>2024-10-19T13:00:00+09:00</updated>
+    <updated>2024-11-10T13:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/usr-003/</id>
-    <content src="http://localhost:4000/posts/usr-003/" />
+    <id>http://localhost:4000/posts/diner-schedule-table/</id>
+    <content src="http://localhost:4000/posts/diner-schedule-table/" />
     <author>
       <name>jay</name>
     </author>
@@ -38,20 +38,20 @@
     
   
 
-  <summary>Get User Detail API</summary>
+  <summary>Description of Table &amp;#39;Store_Schedule&amp;#39;</summary>
 
   </entry>
 
   
   <entry>
-    <title>USR-002 — Create User API</title>
-    <link href="http://localhost:4000/posts/usr-002/" rel="alternate" type="text/html" title="USR-002 — Create User API" />
-    <published>2024-10-10T13:00:00+09:00</published>
+    <title>Store Table Documentation</title>
+    <link href="http://localhost:4000/posts/diner-table/" rel="alternate" type="text/html" title="Store Table Documentation" />
+    <published>2024-11-09T13:00:00+09:00</published>
   
-    <updated>2024-10-10T13:00:00+09:00</updated>
+    <updated>2024-11-09T13:00:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/usr-002/</id>
-    <content src="http://localhost:4000/posts/usr-002/" />
+    <id>http://localhost:4000/posts/diner-table/</id>
+    <content src="http://localhost:4000/posts/diner-table/" />
     <author>
       <name>jay</name>
     </author>
@@ -62,20 +62,20 @@
     
   
 
-  <summary>Create User API</summary>
+  <summary>Description of Table &amp;#39;Store&amp;#39;</summary>
 
   </entry>
 
   
   <entry>
-    <title>USR-001 — User Entity</title>
-    <link href="http://localhost:4000/posts/usr-001/" rel="alternate" type="text/html" title="USR-001 — User Entity" />
-    <published>2024-10-06T13:00:00+09:00</published>
+    <title>Menu Table Documentation</title>
+    <link href="http://localhost:4000/posts/menu-table/" rel="alternate" type="text/html" title="Menu Table Documentation" />
+    <published>2024-11-08T13:00:00+09:00</published>
   
-    <updated>2024-10-06T13:00:00+09:00</updated>
+    <updated>2024-11-11T12:23:00+09:00</updated>
   
-    <id>http://localhost:4000/posts/usr-001/</id>
-    <content src="http://localhost:4000/posts/usr-001/" />
+    <id>http://localhost:4000/posts/menu-table/</id>
+    <content src="http://localhost:4000/posts/menu-table/" />
     <author>
       <name>jay</name>
     </author>
@@ -86,7 +86,31 @@
     
   
 
-  <summary>User Entity</summary>
+  <summary>Description of Table &amp;#39;Menu&amp;#39;</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Order Table Documentation</title>
+    <link href="http://localhost:4000/posts/order-table/" rel="alternate" type="text/html" title="Order Table Documentation" />
+    <published>2024-11-07T13:00:00+09:00</published>
+  
+    <updated>2024-11-11T12:23:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/order-table/</id>
+    <content src="http://localhost:4000/posts/order-table/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="FitDine" />
+    
+  
+
+  <summary>Description of Table &amp;#39;Order&amp;#39;</summary>
 
   </entry>
 
@@ -96,7 +120,7 @@
     <link href="http://localhost:4000/posts/user-table/" rel="alternate" type="text/html" title="User Table Documentation" />
     <published>2024-10-06T13:00:00+09:00</published>
   
-    <updated>2024-10-06T13:00:00+09:00</updated>
+    <updated>2024-11-09T12:01:00+09:00</updated>
   
     <id>http://localhost:4000/posts/user-table/</id>
     <content src="http://localhost:4000/posts/user-table/" />
@@ -111,30 +135,6 @@
   
 
   <summary>Description of Table &amp;#39;User&amp;#39;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>FitDine 3-Tier Architecture</title>
-    <link href="http://localhost:4000/posts/three-tier-architecture/" rel="alternate" type="text/html" title="FitDine 3-Tier Architecture" />
-    <published>2024-10-03T13:00:00+09:00</published>
-  
-    <updated>2024-10-03T13:00:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/three-tier-architecture/</id>
-    <content src="http://localhost:4000/posts/three-tier-architecture/" />
-    <author>
-      <name>jay</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-  
-
-  <summary>3-Tier Architecture of the project</summary>
 
   </entry>
 
