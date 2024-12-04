@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>Jay</title>
   <subtitle>A minimal, responsive and feature-rich Jekyll theme for technical writing.</subtitle>
-  <updated>2024-12-07T17:32:13+09:00</updated>
+  <updated>2024-12-08T03:15:02+09:00</updated>
   <author>
     <name>JAYGUE LEE</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>HikariCP</title>
+    <link href="http://localhost:4000/posts/HikariCP/" rel="alternate" type="text/html" title="HikariCP" />
+    <published>2024-12-04T13:00:00+09:00</published>
+  
+    <updated>2024-12-04T13:00:00+09:00</updated>
+  
+    <id>http://localhost:4000/posts/HikariCP/</id>
+    <content src="http://localhost:4000/posts/HikariCP/" />
+    <author>
+      <name>jay</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+  
+
+  <summary>HikariCP는 Java 응용 프로그램에서 JDBC Connection Pool을 제공하는 가볍고 고성능의 커넥션 풀 라이브러리입니다. Spring Boot는 기본적으로 HikariCP를 데이터베이스 연결 풀로 사용합니다.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>Description of Table &amp;#39;Order&amp;#39;</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>User Table Documentation</title>
-    <link href="http://localhost:4000/posts/user-table/" rel="alternate" type="text/html" title="User Table Documentation" />
-    <published>2024-10-06T13:00:00+09:00</published>
-  
-    <updated>2024-11-09T12:01:00+09:00</updated>
-  
-    <id>http://localhost:4000/posts/user-table/</id>
-    <content src="http://localhost:4000/posts/user-table/" />
-    <author>
-      <name>jay</name>
-    </author>
-
-  
-    
-    <category term="FitDine" />
-    
-  
-
-  <summary>Description of Table &amp;#39;User&amp;#39;</summary>
 
   </entry>
 

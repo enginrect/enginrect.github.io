@@ -1,6 +1,23 @@
 [
   
   {
+    "title": "HikariCP",
+    "url": "/posts/HikariCP/",
+    "categories": "Blogging",
+    "tags": "blog, Java, Spring, Database",
+    "date": "2024-12-04 13:00:00 +0900",
+    
+
+
+
+
+
+    
+    "snippet": "HikariCP의 주요 특징  경량성과 속도: HikariCP는 적은 메모리를 사용하며, 높은 처리량과 짧은 응답시간을 제공합니다.  빠른 커넥션 생성: 빠른 속도로 새로운 커넥션을 생성하고 관리합니다.  최소 설정: 복잡한 설정 없이도 기본적으로 최적화된 환경에서 작동합니다.  유연한 커스터마이징: 고급 사용자 정의 설정을 통해 애플리케이션 요구사항...",
+    "content": "HikariCP의 주요 특징  경량성과 속도: HikariCP는 적은 메모리를 사용하며, 높은 처리량과 짧은 응답시간을 제공합니다.  빠른 커넥션 생성: 빠른 속도로 새로운 커넥션을 생성하고 관리합니다.  최소 설정: 복잡한 설정 없이도 기본적으로 최적화된 환경에서 작동합니다.  유연한 커스터마이징: 고급 사용자 정의 설정을 통해 애플리케이션 요구사항에 맞게 조정할 수 있습니다.  JDBC 표준 준수: JDBC 인터페이스를 따르며, Spring Boot 및 다양한 ORM 라이브러리와의 호환성이 뛰어납니다.Spring Boot에서 HikariCP 기본 설정Spring Boot에서 HikariCP는 spring-boot-starter-data-jpa 또는 spring-boot-starter-jdbc 의존성을 추가하면 자동으로 설정됩니다.HikariCP의 기본 구성 파일 예제 (application.yaml)spring:  datasource:    url: jdbc:mysql://localhost:3306/mydb    username: root    password: password    hikari:      minimum-idle: 5      maximum-pool-size: 20      idle-timeout: 30000      max-lifetime: 1800000      connection-timeout: 20000      pool-name: MyHikariCPPoolHikariCP 관련 로그Spring Boot 애플리케이션을 실행하면 HikariCP 관련 로그가 출력될 수 있습니다. 로그는 주로 HikariCP의 초기화 및 상태 정보를 나타냅니다.예제 로그2023-12-06 10:00:00.123  INFO 12345 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariCPPool - Starting...2023-12-06 10:00:00.456  INFO 12345 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariCPPool - Start completed.디버그 로그 활성화HikariCP의 상세 로그를 확인하려면 application.yml에 로그 레벨을 설정하세요.logging.level.com.zaxxer.hikari: DEBUG이 설정을 통해 HikariCP의 커넥션 풀링 동작에 대한 세부 로그를 확인할 수 있습니다.HikariCP 커스터마이징 방법DataSource를 직접 구성하거나 Spring Boot의 기본 설정을 오버라이드할 수 있습니다.Java Config에서 설정import com.zaxxer.hikari.HikariConfig;import com.zaxxer.hikari.HikariDataSource;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;import javax.sql.DataSource;@Configurationpublic class DataSourceConfig {    @Bean    public DataSource dataSource() {        HikariConfig config = new HikariConfig();        config.setJdbcUrl(\"jdbc:mysql://localhost:3306/mydb\");        config.setUsername(\"root\");        config.setPassword(\"password\");        config.setMaximumPoolSize(20);        config.setMinimumIdle(5);        config.setIdleTimeout(30000);        config.setMaxLifetime(1800000);        config.setConnectionTimeout(20000);        config.setPoolName(\"CustomHikariCPPool\");        return new HikariDataSource(config);    }}HikariCP 사용 시 주의점  최대 풀 크기 설정 (maximum-pool-size):          지나치게 큰 값으로 설정하면 메모리 사용량이 늘어나고, 너무 작은 값으로 설정하면 커넥션 부족으로 성능 문제가 발생할 수 있습니다.        데드락 방지:          커넥션 누수를 방지하기 위해 애플리케이션에서 반드시 커넥션을 닫아야 합니다.        적절한 타임아웃 설정:          connection-timeout과 idle-timeout 값을 적절히 설정하여 성능을 최적화 해야합니다.      HikariCP는 기본적으로 고성능으로 동작하므로, 설정을 변경하기 전 기본값으로 테스트하고 필요에 따라 커스터마이징하는 것이 좋습니다."
+  },
+  
+  {
     "title": "Store_Schedule Table Documentation",
     "url": "/posts/diner-schedule-table/",
     "categories": "FitDine",
