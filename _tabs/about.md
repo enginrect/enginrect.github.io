@@ -24,7 +24,7 @@ To back my skills with credentials, I’ve obtained multiple **AWS & CNCF certif
 
 - ![Kubernetes](https://img.shields.io/badge/CKA-326CE5?style=flat&logo=kubernetes&logoColor=white) [Certified Kubernetes Administrator (CKA)](https://www.credly.com/badges/1fb4c3c3-9d9d-4bcc-89fa-d2328eec0acd)
 - ![Kubernetes](https://img.shields.io/badge/CKAD-326CE5?style=flat&logo=kubernetes&logoColor=white) [Certified Kubernetes Application Developer (CKAD)](https://www.credly.com/badges/f600e92e-1dfa-40e9-8cd3-b78f793913e1)
-- ![Cloud Native](https://img.shields.io/badge/KCD_Contributor-326CE5?style=flat&logo=cncf&logoColor=white) [KCD Korea 2023 Contributor](https://www.credly.com/badges/5457873e-13a9-4c24-bbe2-96ea7217dde8)
+- ![Kubernetes](https://img.shields.io/badge/KCD_Contributor-326CE5?style=flat&logo=cncf&logoColor=white) [KCD Korea 2023 Contributor](https://www.credly.com/badges/5457873e-13a9-4c24-bbe2-96ea7217dde8)
 
 - ![AWS](https://img.shields.io/badge/AWS_DevOps_Pro-232F3E?style=flat&logo=amazonwebservices&logoColor=white) [AWS Certified DevOps Engineer – Professional](https://www.credly.com/badges/42a741ea-3c13-425b-9fb1-afbdfb8f9d25)
 - ![AWS](https://img.shields.io/badge/AWS_SA_Associate-232F3E?style=flat&logo=amazonwebservices&logoColor=white) [AWS Certified Solutions Architect – Associate](https://www.credly.com/badges/a8a9198e-91c7-4332-969d-4f3131bf315b)
