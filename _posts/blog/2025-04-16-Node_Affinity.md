@@ -1,6 +1,6 @@
 ---
 title: NodeAffinity
-description: Kubernetes 클러스터 내에서 가상 머신(VM)을 컨테이너처럼 실행할 수 있게 해주는 확장 프로젝트
+description: 어떤 노드에 스케줄될 수 있는지를 노드의 라벨을 기준으로 제어할 수 있게 해주는 기능
 author: jay
 date: 2025-04-16 12:00:00 +0800
 categories: [Blogging]
