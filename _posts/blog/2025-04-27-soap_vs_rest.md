@@ -10,8 +10,6 @@ math: false
 mermaid: false
 ---
 
-## SOAP vs REST
----
 ### 개념 설명:
 > **SOAP (Simple Object Access Protocol)**: SOAP Version 1.2 is a lightweight protocol intended for exchanging structured information in a decentralized, distributed environment.   
 > [공식문서 (W3C SOAP)](https://www.w3.org/TR/soap/) \
