@@ -12,14 +12,14 @@ mermaid: true
 
 
 ### 개념 설명:
-Kubernetes의 `Secret`은 비밀번호, 토큰, 인증 키 같은 민감한 데이터를 저장하고 관리하는 리소스다.  
-기본적으로 Base64로 인코딩되며, 환경변수, 볼륨, 커맨드라인 인자 등을 통해 Pod에 주입할 수 있다.
+Kubernetes의 `Secret`은 비밀번호, 토큰, 인증 키 같은 민감한 데이터를 저장하고 관리하는 리소스.  
+기본적으로 Base64로 인코딩되며, 환경변수, 볼륨, 커맨드라인 인자 등을 통해 Pod에 주입할 수 있음.
 
 > “A Secret is an object that contains a small amount of sensitive data such as a password, a token, or a key. Such information might otherwise be put in a Pod specification or in a container image.”  
 > [공식문서](https://kubernetes.io/docs/concepts/configuration/secret/)
 
-하지만 Base64 인코딩은 **암호화가 아니며**, Git에 그대로 올릴 경우 민감 정보 유출 위험이 크다.  
-GitOps 환경에서는 이를 안전하게 처리하기 위한 여러 도구가 필요하다.
+하지만 Base64 인코딩은 **암호화가 아니며**, Git에 그대로 올릴 경우 민감 정보 유출 위험이 큼.  
+GitOps 환경에서는 이를 안전하게 처리하기 위한 여러 도구가 필요.
 
 ---
 
