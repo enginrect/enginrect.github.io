@@ -1,5 +1,6 @@
 # 빌드 디렉터리
 _site/
+_site/*
 .jekyll-cache/
 .sass-cache/
 .rollup.cache/
@@ -24,3 +25,48 @@ Gemfile.lock
 
 # 환경 변수
 .env
+
+# Bundler cache
+.bundle
+vendor
+
+# Jekyll cache
+.jekyll-cache
+.jekyll-metadata
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# IDE configurations
+.idea
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+
+# Misc
+_sass/vendors
+assets/js/dist
+
+# Ignore site builds and cache
+vendor/
+
+# Ignore local config and temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+
+# Ignore generated files during deployment (if using GitHub Actions or similar)
+assets/js/dist/
+assets/css/style.css
+assets/css/override.css
+
+*.iml
